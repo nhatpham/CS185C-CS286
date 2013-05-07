@@ -13,6 +13,8 @@
 #import "LogInViewController.h"
 #import "CinequestAppDelegate.h"
 #import "Schedule.h"
+#import <EventKit/EventKit.h>
+#import <EventKitUI/EventKitUI.h>
 
 @interface MySchedulerViewController (Private)
 - (void)doneEditing;
@@ -105,10 +107,19 @@ UITableViewCell *previousCell;
 	}
 	
     //display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+    
+    /*self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
 																							target:self
 																							action:@selector(edit)] autorelease];
-	
+	*/
+    
+    
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Add Cal"
+                                                                              style:UIBarButtonItemStyleBordered
+                                                                             target:self
+                                                                             action:@selector(Add:)] autorelease];
+    
+    
 	// Sync button
 	self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Sync"
 																			 style:UIBarButtonItemStyleBordered
@@ -170,7 +181,7 @@ UITableViewCell *previousCell;
 	
 	// reload tableView data
 	[self.tableView reloadData];
-	[self doneEditing];
+	//[self doneEditing];
     [super viewWillAppear:animated];
 }
 #pragma mark -
@@ -192,6 +203,76 @@ UITableViewCell *previousCell;
 	[loginScreen setParent:self];
 	[self.navigationController pushViewController:loginScreen animated:YES];
 	[loginScreen release];
+}
+
+- (IBAction)Add:(id)sender {
+    
+    //NSLog();
+    
+    if(mySchedule.count <= 0)
+        return;
+    
+    //NSDate *object = _objects[indexPath.row];
+    //cell.textLabel.text = [object description];
+    
+    //Question *question = [quiz objectAtIndex:[indexPath row]];
+    //cell.textLabel.text = question.text;
+    
+    //[rowsData
+    
+    Schedule *s = [mySchedule objectAtIndex:0];
+    
+    
+    
+    EKEventStore *store = [[EKEventStore alloc] init];
+    EKEvent *myEvent = [EKEvent eventWithEventStore:store];
+    
+    myEvent.title = s.title;
+    myEvent.startDate = s.date;
+    myEvent.endDate = s.endDate;
+    myEvent.calendar = store.defaultCalendarForNewEvents;
+    
+    //EKAlarm *reminder = [EKAlarm alarmWithRelativeOffset:];
+    //[myEvent addAlarm:reminder];
+    
+    NSError *error;
+    BOOL saved = [store saveEvent:myEvent span: EKSpanThisEvent error:&error];
+    if(saved)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Test123" message:@"Saved" delegate:self cancelButtonTitle:@"Right"otherButtonTitles: nil];
+        
+    }
+    
+    [mySchedule removeObjectAtIndex:0];
+    //[mySchedule reloadData];
+    //[mySchedule beginUpdates];
+    //[mySchedule endUpdates];
+    [self.tableView reloadData];
+
+    
+    
+    //[self.tableView r];
+    //[super viewWillAppear:animated];
+    /*
+	LogInViewController *loginScreen = [[LogInViewController alloc] init];
+	[loginScreen setParent:self];
+	[self.navigationController pushViewController:loginScreen animated:YES];
+	[loginScreen release];
+     
+     */
+    
+     
+    
+    [self.tableView beginUpdates];
+    [self.tableView  endUpdates];
+    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:s.title
+                                                      message: 
+                            [@"Add to the Calendar " stringByAppendingString: s.dateString]
+                                                     delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    [message show];
 }
 // This function will attempt to login using provided credentials via POST to the cinequest script page
 // PRECOND: have a valid username/password -- protocolType should be SLGET?
@@ -369,6 +450,8 @@ UITableViewCell *previousCell;
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
 	return index;
 }
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	// Loading Schedule into the TabelViewCells
@@ -378,7 +461,17 @@ UITableViewCell *previousCell;
 	
 	
     static NSString *CellIdentifier = @"Cell";   
+    //UITableViewCell *tempCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
     UITableViewCell *tempCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    tempCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    /*
+    if (tempCell == nil) {
+        tempCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        tempCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    */
     
 	UILabel *titleLabel;
 	UILabel *timeLabel;
@@ -439,9 +532,39 @@ UITableViewCell *previousCell;
 	}
 	 	
 	tempCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    //static NSString *CellIdentifier = @"Cell";
+    
+
+    
+    
 
     return tempCell;
 }
+ 
+/*
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    
+    NSDate *object = _objects[indexPath.row];
+    //cell.textLabel.text = [object description];
+    
+    Question *question = [quiz objectAtIndex:[indexPath row]];
+    cell.textLabel.text = question.text;
+    return cell;
+}
+ 
+ */
+
 #pragma mark -
 #pragma mark UITableView Delegate
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -634,5 +757,8 @@ UITableViewCell *previousCell;
 		[self.navigationController popViewControllerAnimated:YES];
     }
 }
+
+
+
 
 @end

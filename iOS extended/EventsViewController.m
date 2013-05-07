@@ -341,7 +341,6 @@
 		{
 			[data setObject:tempArray forKey:previousDay];
 			[previousDay release];
-            //dateString = nil;
 			previousDay = [[NSString alloc] initWithString:dateString];
 			[days addObject:previousDay];
 			
@@ -612,10 +611,10 @@
 	
 	//NSLog(@"%@",link);
 	
-	EventDetailViewController *eventDetail = [[EventDetailViewController alloc] initWithTitle:nil
+	EventDetailViewController *eventDetail = [[EventDetailViewController alloc] initWithTitle:event.title
 																				andDataObject:event
 																					   andURL:[NSURL URLWithString:link]];
-	//eventDetail.displayAddButton = YES;
+	eventDetail.displayAddButton = YES;
 	UIApplication *app = [UIApplication sharedApplication];
 	app.networkActivityIndicatorVisible = YES;
 	

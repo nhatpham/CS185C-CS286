@@ -10,6 +10,7 @@
 		1D3623260D0F684500981E51 /* CinequestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CinequestAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
 		76BDA10710FAFCAF00B691C3 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BDA0DC10FAFCAF00B691C3 /* NewsViewController.m */; };
@@ -68,11 +69,15 @@
 		76BDA19D10FAFF8C00B691C3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BDA19C10FAFF8C00B691C3 /* MessageUI.framework */; };
 		76BDA3CC10FB033500B691C3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BDA3CB10FB033500B691C3 /* libxml2.dylib */; };
 		76BDA48E10FB08A600B691C3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BDA48D10FB08A600B691C3 /* libsqlite3.dylib */; };
-		CB51C3E2173303CB00B3AF3A /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51C3E1173303CB00B3AF3A /* EventKit.framework */; };
-		CB51C3E5173303DD00B3AF3A /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51C3E4173303DC00B3AF3A /* EventKitUI.framework */; };
-		CB51C3EA1733043700B3AF3A /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51C3E81733043700B3AF3A /* CalendarViewController.m */; };
-		CB51C3EB1733043700B3AF3A /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB51C3E91733043700B3AF3A /* CalendarViewController.xib */; };
-		CB51C3F21736692900B3AF3A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51C3F11736692800B3AF3A /* UIKit.framework */; };
+		CB131EE41738B51E00806772 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB131EDE1738B51E00806772 /* MapViewController.m */; };
+		CB131EE51738B51E00806772 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB131EDF1738B51E00806772 /* MapViewController.xib */; };
+		CB131EE61738B51E00806772 /* GPSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB131EE11738B51E00806772 /* GPSViewController.xib */; };
+		CB131EE71738B51E00806772 /* GPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB131EE31738B51E00806772 /* GPSViewController.m */; };
+		CB131EEB1738B53400806772 /* CalendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB131EE91738B53400806772 /* CalendarController.m */; };
+		CB131EEC1738B53400806772 /* CalendarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB131EEA1738B53400806772 /* CalendarController.xib */; };
+		CB51C3FD17366B8D00B3AF3A /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51C3FB17366B8D00B3AF3A /* EventKit.framework */; };
+		CB51C3FE17366B8D00B3AF3A /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51C3FC17366B8D00B3AF3A /* EventKitUI.framework */; };
+		CB51C42A1737E17600B3AF3A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51C4291737E17600B3AF3A /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +85,7 @@
 		1D3623240D0F684500981E51 /* CinequestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CinequestAppDelegate.h; path = Classes/CinequestAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* CinequestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CinequestAppDelegate.m; path = Classes/CinequestAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* Cinequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cinequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AB4B0D9B1048005BE974 /* Cinequest_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cinequest_Prefix.pch; sourceTree = "<group>"; };
 		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -170,12 +176,18 @@
 		76BDA3CB10FB033500B691C3 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		76BDA48D10FB08A600B691C3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* Cinequest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Cinequest-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		CB51C3E1173303CB00B3AF3A /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		CB51C3E4173303DC00B3AF3A /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
-		CB51C3E71733043700B3AF3A /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
-		CB51C3E81733043700B3AF3A /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
-		CB51C3E91733043700B3AF3A /* CalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
-		CB51C3F11736692800B3AF3A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CB131EDE1738B51E00806772 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		CB131EDF1738B51E00806772 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		CB131EE01738B51E00806772 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		CB131EE11738B51E00806772 /* GPSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPSViewController.xib; sourceTree = "<group>"; };
+		CB131EE21738B51E00806772 /* GPSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSViewController.h; sourceTree = "<group>"; };
+		CB131EE31738B51E00806772 /* GPSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSViewController.m; sourceTree = "<group>"; };
+		CB131EE91738B53400806772 /* CalendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarController.m; sourceTree = "<group>"; };
+		CB131EEA1738B53400806772 /* CalendarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarController.xib; sourceTree = "<group>"; };
+		CB131EED1738B54A00806772 /* CalendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarController.h; sourceTree = "<group>"; };
+		CB51C3FB17366B8D00B3AF3A /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		CB51C3FC17366B8D00B3AF3A /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		CB51C4291737E17600B3AF3A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,10 +195,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB51C3F21736692900B3AF3A /* UIKit.framework in Frameworks */,
-				CB51C3E5173303DD00B3AF3A /* EventKitUI.framework in Frameworks */,
-				CB51C3E2173303CB00B3AF3A /* EventKit.framework in Frameworks */,
+				CB51C42A1737E17600B3AF3A /* MapKit.framework in Frameworks */,
+				CB51C3FD17366B8D00B3AF3A /* EventKit.framework in Frameworks */,
+				CB51C3FE17366B8D00B3AF3A /* EventKitUI.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
 				76BDA19210FAFF4A00B691C3 /* QuartzCore.framework in Frameworks */,
 				76BDA19910FAFF8100B691C3 /* SystemConfiguration.framework in Frameworks */,
@@ -210,7 +223,6 @@
 		29B97314FDCFA39411CA2CEA /* Cinequest */ = {
 			isa = PBXGroup;
 			children = (
-				CB51C3F11736692800B3AF3A /* UIKit.framework */,
 				76BDA0D910FAFCA400B691C3 /* Classes */,
 				76BDA0D710FAFC5600B691C3 /* AppDelegate */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -245,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				76BDA19110FAFF4A00B691C3 /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765070DF74369002DB57D /* CoreGraphics.framework */,
 				76BDA19810FAFF8100B691C3 /* SystemConfiguration.framework */,
@@ -267,9 +280,8 @@
 		76BDA0D910FAFCA400B691C3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CB51C3E4173303DC00B3AF3A /* EventKitUI.framework */,
-				CB51C3E1173303CB00B3AF3A /* EventKit.framework */,
-				CB51C3E61733040200B3AF3A /* Calendar */,
+				CB51C4221737E13E00B3AF3A /* MapController */,
+				CB51C4001737317C00B3AF3A /* CalendarController */,
 				76BDA0FB10FAFCAF00B691C3 /* FilmsViewController */,
 				76BDA0F310FAFCAF00B691C3 /* EventsViewController */,
 				76BDA0EF10FAFCAF00B691C3 /* ForumsViewController */,
@@ -472,14 +484,38 @@
 			name = XMLParser;
 			sourceTree = "<group>";
 		};
-		CB51C3E61733040200B3AF3A /* Calendar */ = {
+		CB51C4001737317C00B3AF3A /* CalendarController */ = {
 			isa = PBXGroup;
 			children = (
-				CB51C3E71733043700B3AF3A /* CalendarViewController.h */,
-				CB51C3E81733043700B3AF3A /* CalendarViewController.m */,
-				CB51C3E91733043700B3AF3A /* CalendarViewController.xib */,
+				CB131EED1738B54A00806772 /* CalendarController.h */,
+				CB131EE91738B53400806772 /* CalendarController.m */,
+				CB131EEA1738B53400806772 /* CalendarController.xib */,
+				CB51C3FB17366B8D00B3AF3A /* EventKit.framework */,
+				CB51C3FC17366B8D00B3AF3A /* EventKitUI.framework */,
 			);
-			name = Calendar;
+			name = CalendarController;
+			sourceTree = "<group>";
+		};
+		CB51C4221737E13E00B3AF3A /* MapController */ = {
+			isa = PBXGroup;
+			children = (
+				CB51C43017388AE300B3AF3A /* Support Files */,
+				CB51C4291737E17600B3AF3A /* MapKit.framework */,
+				CB131EDE1738B51E00806772 /* MapViewController.m */,
+				CB131EDF1738B51E00806772 /* MapViewController.xib */,
+				CB131EE01738B51E00806772 /* MapViewController.h */,
+				CB131EE11738B51E00806772 /* GPSViewController.xib */,
+				CB131EE21738B51E00806772 /* GPSViewController.h */,
+				CB131EE31738B51E00806772 /* GPSViewController.m */,
+			);
+			name = MapController;
+			sourceTree = "<group>";
+		};
+		CB51C43017388AE300B3AF3A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -554,7 +590,9 @@
 				76BDA16310FAFDA100B691C3 /* dvd_icon_small.png in Resources */,
 				76BDA16410FAFDA100B691C3 /* trans_forums_small.png in Resources */,
 				76BDA16510FAFDA100B691C3 /* FBConnect.bundle in Resources */,
-				CB51C3EB1733043700B3AF3A /* CalendarViewController.xib in Resources */,
+				CB131EE51738B51E00806772 /* MapViewController.xib in Resources */,
+				CB131EE61738B51E00806772 /* GPSViewController.xib in Resources */,
+				CB131EEC1738B53400806772 /* CalendarController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +631,9 @@
 				76BDA17210FAFDA100B691C3 /* DDXMLElementAdditions.m in Sources */,
 				76BDA17310FAFDA100B691C3 /* DDXMLNode.m in Sources */,
 				76BDA17410FAFDA100B691C3 /* NSStringAdditions.m in Sources */,
-				CB51C3EA1733043700B3AF3A /* CalendarViewController.m in Sources */,
+				CB131EE41738B51E00806772 /* MapViewController.m in Sources */,
+				CB131EE71738B51E00806772 /* GPSViewController.m in Sources */,
+				CB131EEB1738B53400806772 /* CalendarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +644,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nhat Pham (WT56366X8Y)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -611,7 +652,7 @@
 				GCC_PREFIX_HEADER = Cinequest_Prefix.pch;
 				INFOPLIST_FILE = "Cinequest-Info.plist";
 				PRODUCT_NAME = Cinequest;
-				SDKROOT = macosx;
+				PROVISIONING_PROFILE = "1D7967D0-C2D8-46F5-ADC6-CED41288666E";
 			};
 			name = Debug;
 		};
@@ -619,12 +660,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nhat Pham (WT56366X8Y)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Cinequest_Prefix.pch;
 				INFOPLIST_FILE = "Cinequest-Info.plist";
 				PRODUCT_NAME = Cinequest;
-				SDKROOT = iphoneos;
+				PROVISIONING_PROFILE = "1D7967D0-C2D8-46F5-ADC6-CED41288666E";
 			};
 			name = Release;
 		};
@@ -632,6 +674,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -647,12 +690,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nhat Pham (WT56366X8Y)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Cinequest_Prefix.pch;
 				INFOPLIST_FILE = "Cinequest-Info.plist";
 				PRODUCT_NAME = Cinequest;
-				SDKROOT = iphoneos;
+				PROVISIONING_PROFILE = "1D7967D0-C2D8-46F5-ADC6-CED41288666E";
 			};
 			name = Distribution;
 		};
@@ -660,14 +704,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nhat Pham (WT56366X8Y)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				OTHER_LDFLAGS = "-lxml2";
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos6.0;
 			};
 			name = Debug;
@@ -676,6 +720,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

@@ -11,6 +11,8 @@
 #import "EventDetailViewController.h"
 #import "LoadDataViewController.h"
 #import "DDXML.h"
+#import "CalendarController.h"
+#import "MapViewController.h"
 
 @interface NewsViewController (Private)
 
@@ -48,7 +50,7 @@
 																			  style:UIBarButtonItemStyleBordered
 																			 target:self
 																			 action:@selector(toFestival:)] autorelease];
-	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"DVDs"
+	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Map"
 																			   style:UIBarButtonItemStyleBordered
 																			  target:self
 																			  action:@selector(toDVDs:)] autorelease];
@@ -168,15 +170,24 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 - (IBAction)toDVDs:(id)sender {
-	
-    UIViewController* flipViewController = [[UIViewController alloc] initWithNibName:@"flip" bundle:[NSBundle mainBundle]];
-    [self.view addSubview:flipViewController.view];
+
+    CalendarController *controller = [[MapViewController alloc] init];
     
-    //CinequestAppDelegate *delegate = (CinequestAppDelegate*)[[UIApplication sharedApplication] delegate];
-	//delegate.tabBarController.selectedIndex = 3;
-	//delegate.isPresentingModalView = NO;
+    [self presentModalViewController:controller animated:YES];
+    
+    [self dismissModalViewControllerAnimated:YES];
+    /*
+    CalendarController *d = (CalendarController*) [[UIApplication sharedApplication] delegate];
+    d.modalViewController s
+    [self dismissModalViewControllerAnimated::YES];
+    
+     CinequestAppDelegate *delegate = (CinequestAppDelegate*)[[UIApplication sharedApplication] delegate];
+	delegate.tabBarController.selectedIndex = 3;
+	delegate.isPresentingModalView = NO;
 	
 	[self dismissModalViewControllerAnimated:YES];
+     
+     */
 }
 #pragma mark -
 #pragma mark UITableView Data Source

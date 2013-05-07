@@ -609,7 +609,7 @@
 	EventDetailViewController *eventDetail = [[EventDetailViewController alloc] initWithTitle:forum.title
 																				andDataObject:forum
 																					   andURL:[NSURL URLWithString:link]];
-	//eventDetail.displayAddButton = YES;
+	eventDetail.displayAddButton = YES;
 	UIApplication *app = [UIApplication sharedApplication];
 	app.networkActivityIndicatorVisible = YES;
 	
